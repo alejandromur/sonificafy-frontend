@@ -2,6 +2,7 @@ import { useState } from "react";
 
 export default function Form() {
   const [audioData, setAudioData] = useState({});
+  const [audioUrl, setAudioUrl] = useState(null);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -22,6 +23,14 @@ export default function Form() {
       );
       const data = await rawResponse.json();
       setAudioData(data.processingInfo);
+
+      if (data.processingInfo.fileName) {
+        setAudioUrl(
+          `${import.meta.env.VITE_API_BASE_URL}/audio/${
+            data.processingInfo.fileName
+          }`
+        );
+      }
     } catch (error) {
       console.error("Error al procesar la solicitud:", error);
     }
@@ -54,6 +63,12 @@ export default function Form() {
           ) : null}
           {audioData.timestamp ? <li>{audioData.timestamp}</li> : null}
         </ul>
+      ) : null}
+      {audioUrl ? (
+        <audio controls>
+          <source src={audioUrl} type="audio/wav" />
+          Your browser don't support audio files
+        </audio>
       ) : null}
     </>
   );
