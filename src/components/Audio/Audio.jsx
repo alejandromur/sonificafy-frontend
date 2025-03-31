@@ -1,4 +1,4 @@
-export function Audio(src) {
+export default function Audio({ src }) {
   return (
     <audio controls>
       <source src={src} type="audio/wav" />

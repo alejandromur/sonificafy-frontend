@@ -1,4 +1,6 @@
 @import "base/variables.css";
 @import "base/reset.css";
 
-@import "./globals.css";
+@import "../components/Header/header.css";
+@import "../components/Footer/footer.css";
+@import "../components/Waves/waves.css";

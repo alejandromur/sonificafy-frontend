@@ -1,26 +1,20 @@
-import viteLogo from "/vite.svg";
-
 export default function Header() {
   return (
-    <header>
-      <a href="/">
-        <img
-          src={viteLogo}
-          loading="eager"
-          width={120}
-          height={40}
-          className="logo"
-          alt=""
-        />
+    <header className="header">
+      <a className="logo" href="/">
+        <span style={{ fontSize: "300%" }}>~</span>
       </a>
-      <nav>
-        <ul>
-          <li>
-            <a href="/about">About</a>
+      <nav className="nav">
+        <ul className="nav-list">
+          <li className="nav-item">
+            <a className="nav-link" href="/about">
+              About
+            </a>
           </li>
-          <li>
+          <li className="nav-item">
             <a
-              href="https://github.com/alejandromur/sonificafy-frontend"
+              className="nav-link"
+              href="https://github.com/alejandromur/sonificafy-backend"
               target="_blank"
               rel="noreferrer noopener"
             >

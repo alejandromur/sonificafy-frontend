@@ -1,12 +1,20 @@
 import { useState } from "react";
+import { Metadata } from "../Metadata";
+import { Audio } from "../Audio";
 
 export default function Form() {
   const [audioData, setAudioData] = useState({});
   const [audioUrl, setAudioUrl] = useState(null);
 
+  const clearComponent = () => {
+    setAudioData({});
+    setAudioUrl(null);
+  };
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
+      clearComponent();
       const rawResponse = await fetch(
         `${import.meta.env.VITE_API_BASE_URL}/sonification`,
         {
@@ -32,7 +40,7 @@ export default function Form() {
         );
       }
     } catch (error) {
-      console.error("Error al procesar la solicitud:", error);
+      console.error("Error while processing the request:", error);
     }
   };
 
@@ -47,29 +55,8 @@ export default function Form() {
           placeholder="https://example.com"
         />
       </form>
-      {audioData ? (
-        <ul>
-          {audioData.fileName ? <li>{audioData.fileName}</li> : null}
-          {audioData.originalUrl ? (
-            <li>
-              <a
-                href={audioData.originalUrl}
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                {audioData.originalUrl}
-              </a>
-            </li>
-          ) : null}
-          {audioData.timestamp ? <li>{audioData.timestamp}</li> : null}
-        </ul>
-      ) : null}
-      {audioUrl ? (
-        <audio controls>
-          <source src={audioUrl} type="audio/wav" />
-          Your browser don't support audio files
-        </audio>
-      ) : null}
+      {audioUrl ? <Audio src={audioUrl} /> : null}
+      {audioData ? <Metadata data={audioData} /> : null}
     </>
   );
 }

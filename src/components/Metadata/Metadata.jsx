@@ -1,5 +1,5 @@
-export default function Metadata(audioData) {
-  const { fileName, originalUrl, timestamp } = audioData;
+export default function Metadata({ data }) {
+  const { fileName, originalUrl, timestamp } = data;
   return (
     <ul>
       {fileName ? <li>{fileName}</li> : null}
