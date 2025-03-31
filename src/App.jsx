@@ -1,4 +1,4 @@
-import { Header, Footer, Form } from "./components";
+import { Header, Footer, Form, Waves } from "./components";
 import "./styles/index.css";
 
 function App() {
@@ -7,6 +7,7 @@ function App() {
       <Header />
       <main>
         <Form />
+        <Waves />
       </main>
       <Footer />
     </>

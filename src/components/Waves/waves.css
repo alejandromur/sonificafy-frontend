@@ -1,0 +1,18 @@
+.waves-wrapper {
+  inline-size: 100vw;
+  aspect-ratio: 1 / 1;
+  position: fixed;
+  inset-inline: 50%;
+  inset-block-end: 0;
+  animation: appear 8s 2s forwards 1;
+  transform: translate(-50%, 60%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+@keyframes appear {
+  to {
+    transform: translate(-50%, 50%);
+    opacity: 0.3;
+  }
+}
