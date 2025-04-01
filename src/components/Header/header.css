@@ -1,13 +1,41 @@
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 4rem 5rem 0;
+  align-items: center;
+  inline-size: min(100%, var(--max-width));
+  margin-inline: auto;
+  padding: 2rem clamp(1rem, 5vw, 5rem);
+
+  @media (--desktop) {
+    padding-block-start: 4rem;
+  }
 }
 
 .logo {
+  --logo-color: var(--text-color);
   display: flex;
   inline-size: 3rem;
   block-size: 3rem;
+
+  &:hover,
+  &:focus-visible {
+    rect {
+      --logo-color: var(--primary-color);
+      transition: fill 0.25s;
+
+      &:nth-child(2) {
+        transition-delay: 0.1s;
+      }
+
+      &:nth-child(3) {
+        transition-delay: 0.175s;
+      }
+    }
+  }
+
+  rect {
+    transition: fill 0.4s;
+  }
 }
 
 .nav {
