@@ -8,7 +8,8 @@ function App() {
       <Main>
         <Greeting />
         {/* <Form />
-        <Waves /> */}
+         */}
+        <Waves />
       </Main>
       <Footer />
     </>

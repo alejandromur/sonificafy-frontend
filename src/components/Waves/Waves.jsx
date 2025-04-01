@@ -36,7 +36,7 @@ export default function Waves() {
           <circle
             r="20"
             fill="none"
-            stroke="var(--secondary-color)"
+            stroke="var(--primary-color)"
             strokeWidth="1.5"
           >
             <animate
@@ -94,7 +94,7 @@ export default function Waves() {
           <circle
             r="20"
             fill="none"
-            stroke="var(--secondary-color)"
+            stroke="var(--primary-color)"
             strokeWidth="1.5"
           >
             <animate
@@ -152,7 +152,7 @@ export default function Waves() {
           <circle
             r="20"
             fill="none"
-            stroke="var(--secondary-color)"
+            stroke="var(--primary-color)"
             strokeWidth="1.5"
           >
             <animate
@@ -210,7 +210,7 @@ export default function Waves() {
           <circle
             r="20"
             fill="none"
-            stroke="var(--secondary-color)"
+            stroke="var(--primary-color)"
             strokeWidth="1.5"
           >
             <animate
