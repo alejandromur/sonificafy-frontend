@@ -1,8 +1,8 @@
 export default function Metadata({ data }) {
   const { fileName, originalUrl, timestamp } = data;
   return (
-    <ul>
-      {fileName ? <li>{fileName}</li> : null}
+    <ul className="metadata-list">
+      {fileName ? <li className="metadata-fileName">{fileName}</li> : null}
       {originalUrl ? (
         <li>
           <a href={originalUrl} target="_blank" rel="noreferrer noopener">

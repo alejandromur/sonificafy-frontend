@@ -30,14 +30,11 @@ export default function Header() {
       </a>
       <nav className="nav">
         <ul className="nav-list">
-          <li className="nav-item">
-            <a className="nav-link" href="/about">
-              About
-            </a>
+          <li>
+            <a href="/about">About</a>
           </li>
-          <li className="nav-item">
+          <li>
             <a
-              className="nav-link"
               href="https://github.com/alejandromur/sonificafy-backend"
               target="_blank"
               rel="noreferrer noopener"

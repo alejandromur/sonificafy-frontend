@@ -1,0 +1,10 @@
+.metadata-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  align-items: center;
+}
+
+.metadata-fileName {
+  color: var(--primary-color);
+}

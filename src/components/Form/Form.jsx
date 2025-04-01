@@ -2,44 +2,48 @@ import { useState } from "react";
 import { Metadata } from "../Metadata";
 import { Audio } from "../Audio";
 
+const validateUrl = (url) => {
+  try {
+    new URL(url);
+    return true;
+  } catch {
+    return false;
+  }
+};
+
 export default function Form() {
   const [url, setUrl] = useState("");
   const [error, setError] = useState("");
   const [audioData, setAudioData] = useState({});
   const [audioUrl, setAudioUrl] = useState(null);
-
-  const validateUrl = (url) => {
-    try {
-      new URL(url);
-      return true;
-    } catch {
-      return false;
-    }
-  };
+  const [isLoading, setIsLoading] = useState(false);
 
   const clearComponent = () => {
     setAudioData({});
     setAudioUrl(null);
     setUrl("");
     setError("");
+    setIsLoading(false);
   };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    setError("");
+    clearComponent();
+    setIsLoading(true);
 
     if (!url) {
       setError("Add a valid URL");
+      setIsLoading(false);
       return;
     }
 
     if (!validateUrl(url)) {
       setError("Add a valid URL");
+      setIsLoading(false);
       return;
     }
 
     try {
-      clearComponent();
       const rawResponse = await fetch(
         `${import.meta.env.VITE_API_BASE_URL}/sonification`,
         {
@@ -69,9 +73,11 @@ export default function Form() {
           }`
         );
       }
+      setIsLoading(false);
     } catch (error) {
       console.error("Error while processing the request:", error);
       setError("An error occurred while processing the URL");
+      setIsLoading(false);
     }
   };
 
@@ -92,6 +98,7 @@ export default function Form() {
             }}
             aria-invalid={error ? "true" : "false"}
             aria-describedby={error ? "url-error" : undefined}
+            disabled={isLoading}
           />
           {error && (
             <p id="url-error" className="form-error" role="alert">
@@ -101,6 +108,7 @@ export default function Form() {
         </div>
       </form>
       <div className="form-audio-wrapper">
+        {isLoading ? <p>Loading...</p> : null}
         {audioUrl ? <Audio src={audioUrl} /> : null}
         {audioData ? <Metadata data={audioData} /> : null}
       </div>
