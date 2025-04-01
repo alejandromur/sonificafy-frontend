@@ -7,7 +7,12 @@ export default function Waves() {
         viewBox="0 0 500 500"
       >
         <g id="waveGroup" transform="translate(250, 250)">
-          <circle r="20" fill="none" stroke="white" strokeWidth="1.5">
+          <circle
+            r="20"
+            fill="none"
+            stroke="var(--primary-color)"
+            strokeWidth="1.5"
+          >
             <animate
               attributeName="r"
               values="0;20;40;60;80;100;120;140;160;180;200;220;240"
@@ -28,7 +33,12 @@ export default function Waves() {
             />
           </circle>
 
-          <circle r="20" fill="none" stroke="white" strokeWidth="1.5">
+          <circle
+            r="20"
+            fill="none"
+            stroke="var(--secondary-color)"
+            strokeWidth="1.5"
+          >
             <animate
               attributeName="r"
               values="0;20;40;60;80;100;120;140;160;180;200;220;240"
@@ -52,7 +62,12 @@ export default function Waves() {
             />
           </circle>
 
-          <circle r="20" fill="none" stroke="white" strokeWidth="1.5">
+          <circle
+            r="20"
+            fill="none"
+            stroke="var(--primary-color)"
+            strokeWidth="1.5"
+          >
             <animate
               attributeName="r"
               values="0;20;40;60;80;100;120;140;160;180;200;220;240"
@@ -76,7 +91,12 @@ export default function Waves() {
             />
           </circle>
 
-          <circle r="20" fill="none" stroke="white" strokeWidth="1.5">
+          <circle
+            r="20"
+            fill="none"
+            stroke="var(--secondary-color)"
+            strokeWidth="1.5"
+          >
             <animate
               attributeName="r"
               values="0;20;40;60;80;100;120;140;160;180;200;220;240"
@@ -100,7 +120,12 @@ export default function Waves() {
             />
           </circle>
 
-          <circle r="20" fill="none" stroke="white" strokeWidth="1.5">
+          <circle
+            r="20"
+            fill="none"
+            stroke="var(--primary-color)"
+            strokeWidth="1.5"
+          >
             <animate
               attributeName="r"
               values="0;20;40;60;80;100;120;140;160;180;200;220;240"
@@ -124,7 +149,12 @@ export default function Waves() {
             />
           </circle>
 
-          <circle r="20" fill="none" stroke="white" strokeWidth="1.5">
+          <circle
+            r="20"
+            fill="none"
+            stroke="var(--secondary-color)"
+            strokeWidth="1.5"
+          >
             <animate
               attributeName="r"
               values="0;20;40;60;80;100;120;140;160;180;200;220;240"
@@ -148,7 +178,12 @@ export default function Waves() {
             />
           </circle>
 
-          <circle r="20" fill="none" stroke="white" strokeWidth="1.5">
+          <circle
+            r="20"
+            fill="none"
+            stroke="var(--primary-color)"
+            strokeWidth="1.5"
+          >
             <animate
               attributeName="r"
               values="0;20;40;60;80;100;120;140;160;180;200;220;240"
@@ -172,7 +207,12 @@ export default function Waves() {
             />
           </circle>
 
-          <circle r="20" fill="none" stroke="white" strokeWidth="1.5">
+          <circle
+            r="20"
+            fill="none"
+            stroke="var(--secondary-color)"
+            strokeWidth="1.5"
+          >
             <animate
               attributeName="r"
               values="0;20;40;60;80;100;120;140;160;180;200;220;240"
@@ -196,7 +236,7 @@ export default function Waves() {
             />
           </circle>
 
-          <circle r="4" fill="white">
+          <circle r="4" fill="var(--primary-color)">
             <animate
               attributeName="opacity"
               values="0.5;1;0.5"
