@@ -1,0 +1,5 @@
+.main {
+  inline-size: min(100%, var(--max-width));
+  padding-inline: clamp(1rem, 5vw, 5rem);
+  margin-inline: auto;
+}

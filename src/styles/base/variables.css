@@ -1,6 +1,9 @@
 :root {
   --background: #0a0a0a;
-  --text-color: #f4f4f4;
+  --text-color: #fcfbf8;
   --primary-color: #4bd8fa;
   --secondary-color: #f479f1;
+
+  --max-width: 75rem;
+  --content-max-width: 30rem;
 }

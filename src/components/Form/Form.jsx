@@ -45,8 +45,7 @@ export default function Form() {
   };
 
   return (
-    <>
-      <h1>SONIFICAFY</h1>
+    <section className="form">
       <form onSubmit={handleSubmit}>
         <input
           name="url"
@@ -57,6 +56,6 @@ export default function Form() {
       </form>
       {audioUrl ? <Audio src={audioUrl} /> : null}
       {audioData ? <Metadata data={audioData} /> : null}
-    </>
+    </section>
   );
 }

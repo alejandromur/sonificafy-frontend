@@ -1,6 +1,9 @@
 @import "base/variables.css";
+@import "base/breakpoints.css";
 @import "base/reset.css";
 
 @import "../components/Header/header.css";
 @import "../components/Footer/footer.css";
 @import "../components/Waves/waves.css";
+@import "../components/Greeting/greeting.css";
+@import "../components/Main/main.css";

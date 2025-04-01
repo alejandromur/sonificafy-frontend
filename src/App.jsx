@@ -1,14 +1,15 @@
-import { Header, Footer, Form, Waves } from "./components";
+import { Header, Footer, Form, Waves, Greeting, Main } from "./components";
 import "./styles/index.css";
 
 function App() {
   return (
     <>
       <Header />
-      <main>
-        <Form />
-        <Waves />
-      </main>
+      <Main>
+        <Greeting />
+        {/* <Form />
+        <Waves /> */}
+      </Main>
       <Footer />
     </>
   );
