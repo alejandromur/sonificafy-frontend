@@ -1,4 +1,7 @@
 .main {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
   inline-size: min(100%, var(--max-width));
   padding-inline: clamp(1rem, 5vw, 5rem);
   margin-inline: auto;

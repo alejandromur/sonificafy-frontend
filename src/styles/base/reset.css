@@ -4,7 +4,7 @@
   font-weight: 400;
 
   color: rgba(255, 255, 255, 0.87);
-  background: var(--background);
+  background: var(--neutral-100);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -19,7 +19,7 @@
 body {
   margin: 0;
   min-height: 100dvh;
-  background: url("/noise.svg") var(--background);
+  background: url("/noise.svg") var(--neutral-100);
   overflow: hidden;
 }
 
@@ -69,5 +69,5 @@ ol {
 
 ::selection {
   background-color: var(--primary-color);
-  color: var(--background);
+  color: var(--neutral-100);
 }

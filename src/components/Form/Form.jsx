@@ -3,12 +3,14 @@ import { Metadata } from "../Metadata";
 import { Audio } from "../Audio";
 
 export default function Form() {
+  const [url, setUrl] = useState("");
   const [audioData, setAudioData] = useState({});
   const [audioUrl, setAudioUrl] = useState(null);
 
   const clearComponent = () => {
     setAudioData({});
     setAudioUrl(null);
+    setUrl("");
   };
 
   const handleSubmit = async (event) => {
@@ -25,7 +27,7 @@ export default function Form() {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            url: event.target[0].value,
+            url,
           }),
         }
       );
@@ -45,17 +47,22 @@ export default function Form() {
   };
 
   return (
-    <section className="form">
-      <form onSubmit={handleSubmit}>
+    <section className="form-wrapper">
+      <form className="form" onSubmit={handleSubmit}>
         <input
+          className="form-input"
           name="url"
           type="text"
           inputMode="url"
           placeholder="https://example.com"
+          value={url}
+          onChange={(event) => setUrl(event.target.value)}
         />
       </form>
-      {audioUrl ? <Audio src={audioUrl} /> : null}
-      {audioData ? <Metadata data={audioData} /> : null}
+      <div className="form-audio-wrapper">
+        {audioUrl ? <Audio src={audioUrl} /> : null}
+        {audioData ? <Metadata data={audioData} /> : null}
+      </div>
     </section>
   );
 }

@@ -7,8 +7,7 @@ function App() {
       <Header />
       <Main>
         <Greeting />
-        {/* <Form />
-         */}
+        <Form />
         <Waves />
       </Main>
       <Footer />
