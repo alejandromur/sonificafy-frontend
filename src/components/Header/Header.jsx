@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom";
+
 export default function Header() {
   return (
     <header className="header">
-      <a className="logo" href="/">
+      <Link to="/" className="logo">
         <svg
           width="48"
           height="48"
@@ -27,11 +29,11 @@ export default function Header() {
             fill="var(--logo-color)"
           />
         </svg>
-      </a>
+      </Link>
       <nav className="nav">
         <ul className="nav-list">
           <li>
-            <a href="/about">About</a>
+            <Link to="/about">About</Link>
           </li>
           <li>
             <a

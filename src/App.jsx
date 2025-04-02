@@ -1,18 +1,9 @@
-import { Header, Footer, Form, Waves, Greeting, Main } from "./components";
+import { RouterProvider } from "react-router-dom";
+import { router } from "./routes";
 import "./styles/index.css";
 
 function App() {
-  return (
-    <>
-      <Header />
-      <Main>
-        <Greeting />
-        <Form />
-        <Waves />
-      </Main>
-      <Footer />
-    </>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

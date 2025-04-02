@@ -4,3 +4,4 @@ export { Form } from "./Form";
 export { Waves } from "./Waves";
 export { Greeting } from "./Greeting";
 export { Main } from "./Main";
+export { Layout } from "./Layout";
