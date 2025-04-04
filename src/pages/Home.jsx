@@ -1,10 +1,11 @@
-import { Form, Greeting } from "../components";
+import { Form, Greeting, Waves } from "../components";
 
 const Home = () => {
   return (
     <>
       <Greeting />
       <Form />
+      <Waves />
     </>
   );
 };

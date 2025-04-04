@@ -1,13 +1,22 @@
 .waves-wrapper {
-  inline-size: 100vw;
+  --waves-color: var(--neutral-10-dimmed);
+  inline-size: max(100vw, 56rem);
   aspect-ratio: 1 / 1;
   position: fixed;
   inset-inline: 50%;
   inset-block-end: 0;
-  animation: appear 8s 2s forwards 1;
+  animation: appear 4s 0.1s forwards 1;
   transform: translate(-50%, 60%);
   opacity: 0;
   pointer-events: none;
+
+  circle {
+    transition: stroke 0.7s ease-in-out;
+  }
+
+  &.is-playing {
+    --waves-color: var(--primary-color);
+  }
 }
 
 @keyframes appear {

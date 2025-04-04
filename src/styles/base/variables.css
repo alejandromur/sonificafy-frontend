@@ -3,13 +3,14 @@
   --neutral-30: #d9d9d9;
   --neutral-20: #f4f4f4;
   --neutral-10: #fcfbf8;
+  --neutral-10-dimmed: rgba(252, 251, 248, 0.3);
 
   --text-color: var(--neutral-10);
 
   /* --primary-color: #4bd8fa; */
-  --primary-color: #ff0066;
-  --secondary-color: #ff0066;
   /* --secondary-color: rgb(252, 90, 184); */
+  --primary-color: #ff0066;
+  --secondary-color: var(--primary-color);
 
   --max-width: 75rem;
   --content-max-width: 30rem;
