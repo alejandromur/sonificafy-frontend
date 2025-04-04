@@ -1,9 +1,12 @@
-import { Link } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 export default function Header() {
+  const { pathname } = useLocation();
+  console.log(pathname);
+
   return (
     <header className="header">
-      <Link to="/" className="logo">
+      <NavLink to="/" className="logo">
         <svg
           width="48"
           height="48"
@@ -29,11 +32,16 @@ export default function Header() {
             fill="var(--logo-color)"
           />
         </svg>
-      </Link>
+      </NavLink>
       <nav className="nav">
         <ul className="nav-list">
           <li>
-            <Link to="/about">About</Link>
+            <NavLink
+              to="/about"
+              className={({ isActive }) => (isActive ? "is-active" : null)}
+            >
+              About
+            </NavLink>
           </li>
           <li>
             <a
