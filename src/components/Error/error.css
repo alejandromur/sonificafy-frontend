@@ -1,0 +1,33 @@
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 1rem;
+
+  &-title {
+    margin-block-end: 2rem;
+    font-size: 4rem;
+    text-align: center;
+
+    @media (--desktop) {
+      font-size: 6rem;
+    }
+  }
+
+  &-description,
+  &-link {
+    font-size: 1rem;
+    text-align: center;
+
+    @media (--desktop) {
+      font-size: 1.5rem;
+    }
+  }
+
+  /* &-link {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--text-color);
+  } */
+}
