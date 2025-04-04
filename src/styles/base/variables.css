@@ -7,8 +7,9 @@
   --text-color: var(--neutral-10);
 
   /* --primary-color: #4bd8fa; */
-  --primary-color: rgb(252, 90, 184);
-  --secondary-color: rgb(252, 90, 184);
+  --primary-color: #ff0066;
+  --secondary-color: #ff0066;
+  /* --secondary-color: rgb(252, 90, 184); */
 
   --max-width: 75rem;
   --content-max-width: 30rem;

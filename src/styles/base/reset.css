@@ -20,7 +20,7 @@ body {
   margin: 0;
   min-height: 100dvh;
   background: url("/noise.svg") var(--neutral-100);
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 #root {
@@ -87,4 +87,42 @@ input:autofill {
 
 input:-internal-autofill-selected {
   background-color: var(--neutral-100) !important;
+}
+
+.text {
+  section {
+    inline-size: min(100%, 70ch);
+
+    & + section {
+      margin-block-start: 2rem;
+    }
+  }
+
+  h1 {
+    font-size: 200%;
+  }
+
+  h2 {
+    font-size: 175%;
+  }
+
+  h3 {
+    font-size: 150%;
+  }
+
+  p,
+  ul,
+  ol {
+    margin-block: 1rem;
+    font-size: 115%;
+  }
+
+  ul,
+  ol {
+    list-style-type: revert;
+    list-style-position: inside;
+  }
+
+  p {
+  }
 }

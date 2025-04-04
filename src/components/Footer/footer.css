@@ -1,6 +1,6 @@
 .footer {
   display: flex;
-  padding: 2rem clamp(1rem, 5vw, 5rem);
+  padding: 4rem clamp(1rem, 5vw, 5rem) 2rem;
   inline-size: min(100%, var(--max-width));
   margin-inline: auto;
 
