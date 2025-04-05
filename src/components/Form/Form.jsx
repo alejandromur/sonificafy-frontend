@@ -14,7 +14,6 @@ export default function Form() {
   const clearComponent = () => {
     setAudioData({});
     setAudioUrl(null);
-    setUrl("");
     setError("");
     setIsLoading(false);
   };

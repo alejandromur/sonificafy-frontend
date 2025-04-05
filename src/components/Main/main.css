@@ -3,7 +3,7 @@
   flex-direction: column;
   row-gap: 3rem;
   inline-size: min(100%, var(--max-width));
-  padding-block-start: 4rem;
+  padding-block-start: 3rem;
   padding-inline: clamp(1rem, 5vw, 5rem);
   margin-inline: auto;
   position: relative;
