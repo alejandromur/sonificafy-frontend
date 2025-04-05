@@ -1,15 +1,7 @@
 import { useState } from "react";
 import { Metadata } from "../Metadata";
 import { Audio } from "../Audio";
-
-const validateUrl = (url) => {
-  try {
-    new URL(url);
-    return true;
-  } catch {
-    return false;
-  }
-};
+import { validateUrl } from "../../utils";
 
 export default function Form() {
   const [url, setUrl] = useState("");
