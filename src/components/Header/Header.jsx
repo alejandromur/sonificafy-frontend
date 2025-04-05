@@ -1,9 +1,6 @@
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function Header() {
-  const { pathname } = useLocation();
-  console.log(pathname);
-
   return (
     <header className="header">
       <NavLink to="/" className="logo">

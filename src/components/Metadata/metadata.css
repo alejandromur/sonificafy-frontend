@@ -1,10 +1,28 @@
-.metadata-list {
-  display: flex;
-  flex-direction: column;
-  row-gap: 0.5rem;
-  align-items: center;
-}
+.metadata {
+  &-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+    align-items: center;
+  }
 
-.metadata-fileName {
-  color: var(--primary-color);
+  &-data {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+  }
+
+  &-fileName {
+    color: var(--primary-color);
+  }
+
+  &-timestamp {
+    display: flex;
+    align-items: center;
+
+    &::before {
+      content: "/";
+      margin-inline-end: 0.5rem;
+    }
+  }
 }

@@ -9,6 +9,7 @@ export default function Form() {
   const [audioData, setAudioData] = useState({});
   const [audioUrl, setAudioUrl] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [scriptVariant, setScriptVariant] = useState("html_to_sound_space");
 
   const clearComponent = () => {
     setAudioData({});
@@ -18,8 +19,7 @@ export default function Form() {
     setIsLoading(false);
   };
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
+  const handleSubmit = async () => {
     clearComponent();
     setIsLoading(true);
 
@@ -47,6 +47,7 @@ export default function Form() {
           },
           body: JSON.stringify({
             url,
+            scriptVariant,
           }),
         }
       );
@@ -75,7 +76,20 @@ export default function Form() {
 
   return (
     <section className="form-wrapper">
-      <form className="form" onSubmit={handleSubmit}>
+      <form className="form">
+        <div className="form-select-wrapper">
+          <label htmlFor="script-variant">Choose a variant:</label>
+          <select
+            id="script-variant"
+            onChange={(e) => setScriptVariant(e.target.value)}
+          >
+            <option value="html_to_sound_space">Space</option>
+            <option value="html_to_sound">Spaceship</option>
+            <option value="john_frusciante_inspiration">John Frusciante</option>
+            <option value="didgeridoo">Rythm</option>
+            <option value="html_to_sound_trigrams">Trigrams</option>
+          </select>
+        </div>
         <div className="form-input-wrapper">
           <input
             className="form-input"
@@ -92,6 +106,9 @@ export default function Form() {
             aria-describedby={error ? "url-error" : undefined}
             disabled={isLoading}
           />
+          <button className="form-submit" type="button" onClick={handleSubmit}>
+            Submit
+          </button>
           {error && (
             <p id="url-error" className="form-error" role="alert">
               {error}
