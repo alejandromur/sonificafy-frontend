@@ -5,6 +5,7 @@
   position: fixed;
   inset-inline: 50%;
   inset-block-end: 0;
+  z-index: -1;
   animation: appear 4s 0.1s forwards 1;
   transform: translate(-50%, 60%);
   opacity: 0;
