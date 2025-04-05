@@ -7,4 +7,12 @@ export default defineConfig({
   css: {
     postcss: "./postcss.config.js",
   },
+  server: {
+    // Configuración para desarrollo local
+    historyApiFallback: true,
+  },
+  preview: {
+    // Configuración para preview local
+    historyApiFallback: true,
+  },
 });
