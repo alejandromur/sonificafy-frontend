@@ -18,7 +18,8 @@ export default function Form() {
     setIsLoading(false);
   };
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (event) => {
+    event.preventDefault();
     clearComponent();
     setIsLoading(true);
 
@@ -75,7 +76,7 @@ export default function Form() {
 
   return (
     <section className="form-wrapper">
-      <form className="form">
+      <form className="form" onSubmit={handleSubmit}>
         <div className="form-select-wrapper">
           <label htmlFor="script-variant">Choose a variant:</label>
           <select
@@ -105,7 +106,7 @@ export default function Form() {
             aria-describedby={error ? "url-error" : undefined}
             disabled={isLoading}
           />
-          <button className="form-submit" type="button" onClick={handleSubmit}>
+          <button className="form-submit" type="submit">
             Submit
           </button>
           {error && (
