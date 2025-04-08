@@ -54,6 +54,34 @@ const About = () => {
           ranges, envelopes, etc.
         </p>
       </section>
+
+      <section>
+        <h2>If you want to know more</h2>
+        <p>
+          I've also wrote an article explainig some other details about the site
+          that you may want to check out.
+        </p>
+        <ul>
+          <li>
+            <a
+              href="https://mamutlove.com/en/blog/sonificafy-side-project/"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              [EN] Side Project Sonificafy
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://mamutlove.com/blog/proyecto-personal-sonificafy/"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              [ES] Proyecto Personal Sonificafy
+            </a>
+          </li>
+        </ul>
+      </section>
     </article>
   );
 };
